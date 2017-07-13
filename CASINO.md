@@ -14,7 +14,6 @@ the program.*/
 //NOBLE JOY              
 
 
-
 //PRE PROCESSOR DIRECTIVES
 #include<iostream>
 #include<string>
@@ -74,19 +73,18 @@ public:
     void bet_placing()              //FUNCTION TO PLACE AND CHECK BETTING AMOUNT
     {
 
-            system("cls");
-            rules();
-            cout << "\n\nYour current balance is RS." << amount <<"\n";
+       system("cls");
+       rules();
+       cout << "\n\nYour current balance is RS." << amount <<"\n";
 
 
-            do
-            {
-                cout <<name<<",enter money to bet : RS.";
-                cin >> betamount;
-                if(betamount > amount)
-                cout << "Your betting amount is greater than your available balance\n"
-                       <<"\nRe-enter data\n ";
-            }while(betamount >amount);
+        do
+        {
+          cout <<name<<",enter money to bet : RS.";
+          cin >> betamount;
+          if(betamount > amount)
+          cout << "Your betting amount is greater than your available balance\n"<<"\nRe-enter data\n ";
+        }while(betamount >amount);
 
 
      }
@@ -114,8 +112,8 @@ public:
         do
         {
 
-            a.bet_placing();            //FUNCTION CALL USING OBJECT
-            file<<"BETAMOUNT"<<(a.i)++<<":"<<a.betamount<<endl;     //INPUTTING DATA INTO FILE
+           a.bet_placing();            //FUNCTION CALL USING OBJECT
+           file<<"BETAMOUNT"<<(a.i)++<<":"<<a.betamount<<endl;     //INPUTTING DATA INTO FILE
             do
             {
                 cout << "Guess your number to bet between 1 to 20 :";
@@ -163,15 +161,15 @@ public:
 int main()
 {
 
-    play ob;                    //INHERITED CLASS OBJECT
+   play ob;                    //INHERITED CLASS OBJECT
 
-    lines(120,'+');
-    lines(120,'$');              //FUNCTION CALL
-    cout << "\n\n\t\t\t\t\t  $$ ROYAL CASINO GAME $$\n\n\n\n";
-    lines(120,'$');
-    lines(120,'+');
+   lines(120,'+');
+   lines(120,'$');              //FUNCTION CALL
+   cout << "\n\n\t\t\t\t\t  $$ ROYAL CASINO GAME $$\n\n\n\n";
+   lines(120,'$');
+   lines(120,'+');
 
-    ob.game();                  //CLASS FUNCTION CALLED
+   ob.game();                  //CLASS FUNCTION CALLED
 
 
 return(0);
