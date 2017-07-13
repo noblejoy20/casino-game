@@ -1,0 +1,5 @@
+
+NAME:noble joy
+AGE:23
+AMOUNT: RS.2000
+BETAMOUNT1:34
